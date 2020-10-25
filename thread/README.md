@@ -23,13 +23,13 @@ The thread which is responsible for starting the application by invoking the mai
 - The Java main method is a non-deamon thread, so the JVM continues to execute threads; including main, until either the exit method of the class runtime has been called, or all the threads from this particular program that are not labelled as deamon threads have died.
 
 ### Life cycle of a Thread
-https://www.baeldung.com/java-thread-lifecycle
+Ref: https://www.baeldung.com/java-thread-lifecycle
 
-- Difference between sleep()(Static method) and wait()(Called on object)
+![Alt text](src/main/resources/images/ThreadLifeCycle.jpg)
+
+### Difference between sleep()(Static method) and wait()(Called on object)
     - sleep is based on time
     - wait is over when thread is notified.
-
-![Alt text](images/ThreadLifeCycle.jpg)
 
 ### Implementing threads
 - Extend Thread class or
