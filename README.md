@@ -1,2 +1,2 @@
-# java-basic
-java-basic is one stop for all core Java concepts
+# awesome-java
+awesome-java is one stop for all Java features and terminologies
