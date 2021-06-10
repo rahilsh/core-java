@@ -1,4 +1,4 @@
-##Threads in Java
+# Threads in Java
 Threads are small process which run in shared memory space within a process. 
 
 ### Application/Main thread
