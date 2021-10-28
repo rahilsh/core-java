@@ -1,4 +1,4 @@
-package com.rsh.java.basic.thread;
+package com.rsh.java.basic.thread.latch;
 
 import java.util.concurrent.CountDownLatch;
 

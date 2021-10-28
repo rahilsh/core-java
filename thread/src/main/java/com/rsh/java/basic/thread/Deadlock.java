@@ -3,6 +3,13 @@ package com.rsh.java.basic.thread;
 /** @author Rahil */
 public class Deadlock {
 
+  public static void main(String[] args) {
+    final Friend alphonse = new Friend("Alpha");
+    final Friend gaston = new Friend("Beta");
+    new Thread(() -> alphonse.bow(gaston)).start();
+    new Thread(() -> gaston.bow(alphonse)).start();
+  }
+
   private static class Friend {
     private final String name;
 
@@ -22,12 +29,5 @@ public class Deadlock {
     public synchronized void bowBack(Friend bower) {
       System.out.format("%s: %s" + " has bowed back to me!%n", this.name, bower.getName());
     }
-  }
-
-  public static void main(String[] args) {
-    final Friend alphonse = new Friend("Alpha");
-    final Friend gaston = new Friend("Beta");
-    new Thread(() -> alphonse.bow(gaston)).start();
-    new Thread(() -> gaston.bow(alphonse)).start();
   }
 }
