@@ -11,13 +11,13 @@ The same instance of Foo will be passed to three different threads. ThreadA will
 threadB will call second, and threadC will call third. Design a mechanism to ensure that
 first is called before second and second is called before third.
  */
-public class Question {
+public class CallMethodInOrder {
   public static void main(String[] args) {
     Foo foo = new Foo();
 
-    MyThread thread1 = new MyThread(foo, "first");
-    MyThread thread2 = new MyThread(foo, "second");
-    MyThread thread3 = new MyThread(foo, "third");
+    Thread thread1 = new Thread(foo::first);
+    Thread thread2 = new Thread(foo::second);
+    Thread thread3 = new Thread(foo::third);
 
     thread3.start();
     thread2.start();
