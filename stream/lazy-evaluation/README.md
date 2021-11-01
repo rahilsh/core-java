@@ -1,8 +1,5 @@
-Let's Get Lazy: Explore the Real Power of Streams
-Venkat Subramaniam
-http://www.agiledeveloper.com
-venkats@agiledeveloper.com
-Twitter: @venkat_s
+# Explore the Real Power of Streams
+Tutorial - https://www.youtube.com/watch?v=PICHx2at46s&ab_channel=IntelliJIDEAbyJetBrains
 
 -What does being Lazy mean?
 -Applicative Order vs. Normal Order
@@ -21,3 +18,5 @@ Twitter: @venkat_s
 
 Download Code samples from:
 http://www.agiledeveloper.com/downloads.html
+
+
