@@ -1,2 +1,2 @@
-# awesome-java
-awesome-java is one stop for all Java features and terminologies
+# core-java
+core-java is one stop for core Java features and terminologies
