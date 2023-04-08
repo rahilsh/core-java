@@ -1,4 +1,4 @@
-package com.rsh.java.basic.thread;
+package com.rsh.core_java.thread;
 
 /** @author Rahil */
 public class YieldExample {

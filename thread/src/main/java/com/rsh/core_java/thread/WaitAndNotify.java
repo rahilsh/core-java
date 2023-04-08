@@ -1,4 +1,4 @@
-package com.rsh.java.basic.thread;
+package com.rsh.core_java.thread;
 
 /**
  * @author Rahil
@@ -6,13 +6,15 @@ package com.rsh.java.basic.thread;
  */
 public class WaitAndNotify {
 
-  /** @param args the command line arguments */
+  /**
+   * @param args the command line arguments
+   */
   public static void main(String[] args) {
     Adder adder = new Adder();
     adder.start();
     synchronized (adder) {
       try {
-        System.out.println("Waiting for second thread to complete...");
+        System.out.println("Waiting for Adder thread to complete...");
         adder.wait();
       } catch (InterruptedException e) {
         e.printStackTrace();
@@ -27,8 +29,10 @@ public class WaitAndNotify {
     @Override
     public void run() {
       synchronized (this) {
-        for (int i = 0; i < 10; i++) {
-          total += i;
+        try {
+          Thread.sleep(2000);
+        } catch (InterruptedException e) {
+          throw new RuntimeException(e);
         }
         notify();
       }

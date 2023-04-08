@@ -1,4 +1,4 @@
-package com.rsh.java.basic.thread;
+package com.rsh.core_java.thread;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -25,7 +25,7 @@ public class ExecutorExample {
       executor.execute(worker);
     }
     executor.shutdown();
-    while (!executor.isTerminated()) {}
+    while (true) {if (executor.isTerminated()) break;}
 
     System.out.println("Finished all threads");
   }

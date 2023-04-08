@@ -1,6 +1,8 @@
-package com.rsh.java.basic.thread;
+package com.rsh.core_java.thread;
 
-/** @author Rahil */
+/**
+ * @author Rahil
+ */
 public class ThreadState {
 
   public static void main(String[] args) throws InterruptedException {

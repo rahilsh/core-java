@@ -1,4 +1,4 @@
-package com.rsh.java.basic.thread.distributed_fizzbuzz;
+package com.rsh.core_java.thread.distributed_fizzbuzz;
 
 /*
 FizzBuzz: In the classic problem FizzBuzz, you are told to print the numbers from 1 to n. However,

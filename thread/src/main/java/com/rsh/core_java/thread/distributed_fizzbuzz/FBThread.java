@@ -1,4 +1,4 @@
-package com.rsh.java.basic.thread.distributed_fizzbuzz;
+package com.rsh.core_java.thread.distributed_fizzbuzz;
 
 import java.util.function.Function;
 import java.util.function.Predicate;

@@ -1,4 +1,4 @@
-package com.rsh.java.basic.thread;
+package com.rsh.core_java.thread;
 
 public class PrintOddAndEvenNumbersInSequenceUsingTwoThreads {
   // Java program for the above approach
@@ -6,13 +6,14 @@ public class PrintOddAndEvenNumbersInSequenceUsingTwoThreads {
   // Starting counter
   int counter = 1;
 
-  static int N;
+  // Given Number n
+  static int n = 10;
 
   // Function to print odd numbers
   public void printOddNumber() {
     synchronized (this) {
       // Print number till the N
-      while (counter < N) {
+      while (counter < n) {
 
         // If count is even then print
         while (counter % 2 == 0) {
@@ -26,7 +27,7 @@ public class PrintOddAndEvenNumbersInSequenceUsingTwoThreads {
         }
 
         // Print the number
-        System.out.print(counter + " ");
+        System.out.println(Thread.currentThread().getName() + " " + counter + " ");
 
         // Increment counter
         counter++;
@@ -41,7 +42,7 @@ public class PrintOddAndEvenNumbersInSequenceUsingTwoThreads {
   public void printEvenNumber() {
     synchronized (this) {
       // Print number till the N
-      while (counter < N) {
+      while (counter < n) {
 
         // If count is odd then print
         while (counter % 2 == 1) {
@@ -55,7 +56,7 @@ public class PrintOddAndEvenNumbersInSequenceUsingTwoThreads {
         }
 
         // Print the number
-        System.out.print(counter + " ");
+        System.out.println(Thread.currentThread().getName() + " " + counter + " ");
 
         // Increment counter
         counter++;
@@ -68,11 +69,10 @@ public class PrintOddAndEvenNumbersInSequenceUsingTwoThreads {
 
   // Driver Code
   public static void main(String[] args) {
-    // Given Number N
-    N = 10;
 
     // Create an object of class
-    PrintOddAndEvenNumbersInSequenceUsingTwoThreads foo = new PrintOddAndEvenNumbersInSequenceUsingTwoThreads();
+    PrintOddAndEvenNumbersInSequenceUsingTwoThreads foo =
+        new PrintOddAndEvenNumbersInSequenceUsingTwoThreads();
 
     // Create thread t1
     Thread t1 = new Thread(foo::printEvenNumber);

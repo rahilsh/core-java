@@ -1,4 +1,4 @@
-package com.rsh.java.basic.thread.semaphore.call_methods_in_order;
+package com.rsh.core_java.thread.semaphore.call_methods_in_order;
 
 import java.util.concurrent.Semaphore;
 
