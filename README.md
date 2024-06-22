@@ -33,5 +33,7 @@ thenApply- Returns a future. Can have sync functions
 thenAccept - Returns nothing. Can have sync functions
 ```
 
-JMX
+### JMX
+```
 -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=42142 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false
+```
