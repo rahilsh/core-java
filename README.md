@@ -1,4 +1,4 @@
-# core-java
+# java-toolkit
 core-java is one stop for core Java features and terminologies
 
 ### Java Path
