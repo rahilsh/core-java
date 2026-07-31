@@ -1,4 +1,4 @@
-package com.rsh.jlab.concurrency.latch;
+package com.rsh.jlab.concurrency.synchronizer.latch;
 
 import java.util.concurrent.CountDownLatch;
 

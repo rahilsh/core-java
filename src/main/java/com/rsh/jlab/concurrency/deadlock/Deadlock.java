@@ -1,4 +1,4 @@
-package com.rsh.jlab.concurrency;
+package com.rsh.jlab.concurrency.deadlock;
 
 /** @author Rahil */
 public class Deadlock {

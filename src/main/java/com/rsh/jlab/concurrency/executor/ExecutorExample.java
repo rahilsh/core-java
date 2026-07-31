@@ -1,4 +1,4 @@
-package com.rsh.jlab.concurrency;
+package com.rsh.jlab.concurrency.executor;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

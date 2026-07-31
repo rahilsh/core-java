@@ -1,4 +1,4 @@
-package com.rsh.jlab.concurrency.semaphore.call_methods_in_order;
+package com.rsh.jlab.concurrency.synchronizer.semaphore;
 /*
 Call In Order: Suppose we have the following code:
 public class Foo {

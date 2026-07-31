@@ -1,4 +1,4 @@
-package com.rsh.jlab.concurrency;
+package com.rsh.jlab.concurrency.communication;
 
 /**
  * @author Rahil
