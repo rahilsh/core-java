@@ -1,0 +1,39 @@
+src/main/java/com/rsh/jlab/concurrency/basics/ThreadState.java
+  s_c9db79f1959e20::t_716ef18d53fbf4 6-7,10
+pom.xml
+  s_c9db79f1959e20::t_8172e27eca6546 96-117
+src/main/java/com/rsh/jlab/concurrency/executor/ExecutorExample.java
+  s_c9db79f1959e20::t_716ef18d53fbf4 40-42
+src/main/java/com/rsh/jlab/concurrency/fizzbuzz/FBThread.java
+  s_c9db79f1959e20::t_716ef18d53fbf4 10-12
+src/main/java/com/rsh/jlab/concurrency/basics/YieldExample.java
+  s_c9db79f1959e20::t_716ef18d53fbf4 11
+src/main/java/com/rsh/jlab/concurrency/executor/ProcessListFaster.java
+  s_c9db79f1959e20::t_716ef18d53fbf4 92-93
+src/test/java/com/rsh/jlab/lambda/DynamicFilteringTest.java
+  s_c9db79f1959e20::t_716ef18d53fbf4 69
+src/main/java/com/rsh/jlab/lambda/DynamicFiltering.java
+  s_c9db79f1959e20::t_716ef18d53fbf4 13-20
+src/main/java/com/rsh/jlab/concurrency/communication/PrintOddAndEvenNumbersInSequenceUsingTwoThreads.java
+  s_c9db79f1959e20::t_5b79ebfb34cc50 1-98
+src/main/java/com/rsh/jlab/concurrency/synchronizer/semaphore/CallMethodInOrder.java
+  s_c9db79f1959e20::t_6214b8498876a8 1-27
+src/main/java/com/rsh/jlab/concurrency/synchronizer/semaphore/Foo.java
+  s_c9db79f1959e20::t_a88437d1cb7862 1-62
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.19",
+  "base_commit_sha": "f88c307d2d006ce463d26c63e26e9567b79f509e",
+  "prompts": {},
+  "sessions": {
+    "s_c9db79f1959e20": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_045cafb4affexzQJJHrF5lY6S4",
+        "model": "claude-opus-4.8"
+      },
+      "human_author": "Rahil Shaikh <rahilrshk@gmail.com>"
+    }
+  }
+}
