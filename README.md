@@ -76,6 +76,23 @@ CONCURRENCY.md          # concurrency deep-dive notes
 LAMBDA.md               # lambda deep-dive notes
 ```
 
+## Roadmap
+
+Planned topics (contributions welcome — pick one and open a PR!):
+
+- **Concurrency:** `CompletableFuture` composition, `ReentrantLock` / `Condition`,
+  `ReadWriteLock`, `CyclicBarrier` & `Phaser`, `BlockingQueue` (producer/consumer), atomics &
+  `LongAdder`, structured concurrency (Java 21 preview).
+- **Language features:** records, sealed classes, pattern matching for `switch`, text blocks,
+  `var`, enhanced `instanceof`.
+- **Streams & functional:** grouping/partitioning collectors, `flatMap`, `reduce`, custom
+  collectors, `Optional` best practices.
+- **Collections & generics:** wildcards & bounded types, immutable collections, comparators.
+- **JVM & tooling:** equals/hashCode contracts, exception handling patterns, basic JMH benchmarks.
+
+Have an idea that isn't listed? Open a
+[new-example issue](https://github.com/rahilsh/java-lab/issues/new/choose).
+
 ## Contributing
 
 Contributions are welcome — especially new examples for concepts not yet covered. See
