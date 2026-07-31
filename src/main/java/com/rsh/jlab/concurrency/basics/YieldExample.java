@@ -8,8 +8,7 @@ package com.rsh.jlab.concurrency.basics;
  * platform dependent and not guaranteed.
  *
  * <p>Run it and observe: the two threads' output tends to alternate as each yields control after
- * printing. Reference:
- * https://www.geeksforgeeks.org/java-concurrency-yield-sleep-and-join-methods/
+ * printing. Reference: https://www.geeksforgeeks.org/java-concurrency-yield-sleep-and-join-methods/
  *
  * @author Rahil
  */

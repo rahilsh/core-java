@@ -10,14 +10,14 @@ import java.util.function.Predicate;
 import java.util.stream.Stream;
 
 /**
- * A function that takes a Stream&lt;Widget&gt; and returns a Stream&lt;Widget&gt;. This is essentially a
- * UnaryOperator&lt;Stream&lt;Widget&gt;&gt; but it's defined using specific types so that there are fewer
- * generics. Simple intermediate operations like filter() take a Stream&lt;T&gt; and return Stream&lt;T&gt;, so
- * chaining Criterion objects together is like adding a variable number of intermediate operations
- * to a pipeline. A Criterion may be "context-sensitive" in that it may use information about the
- * size of the stream. In order to compute this, the stream elements must first be collected into a
- * list, so that the number of elements can be determined before filtering a subset of the elements
- * based on their number.
+ * A function that takes a Stream&lt;Widget&gt; and returns a Stream&lt;Widget&gt;. This is
+ * essentially a UnaryOperator&lt;Stream&lt;Widget&gt;&gt; but it's defined using specific types so
+ * that there are fewer generics. Simple intermediate operations like filter() take a
+ * Stream&lt;T&gt; and return Stream&lt;T&gt;, so chaining Criterion objects together is like adding
+ * a variable number of intermediate operations to a pipeline. A Criterion may be
+ * "context-sensitive" in that it may use information about the size of the stream. In order to
+ * compute this, the stream elements must first be collected into a list, so that the number of
+ * elements can be determined before filtering a subset of the elements based on their number.
  */
 @FunctionalInterface
 interface Criterion {

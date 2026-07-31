@@ -89,7 +89,8 @@ public class ProcessListFaster {
       try {
         future.get();
       } catch (ExecutionException ex) {
-        throw new IllegalStateException("A worker failed while processing its chunk", ex.getCause());
+        throw new IllegalStateException(
+            "A worker failed while processing its chunk", ex.getCause());
       }
     }
   }

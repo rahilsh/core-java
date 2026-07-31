@@ -37,7 +37,9 @@ public class ExecutorExample {
       executor.execute(worker);
     }
     executor.shutdown();
-    while (true) {if (executor.isTerminated()) break;}
+    while (true) {
+      if (executor.isTerminated()) break;
+    }
 
     System.out.println("Finished all threads");
   }

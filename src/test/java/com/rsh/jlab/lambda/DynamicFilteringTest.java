@@ -66,9 +66,6 @@ class DynamicFilteringTest {
   }
 
   private List<String> names(Criterion criterion) {
-    return criterion
-        .apply(df.widgetList.stream())
-        .map(Widget::name)
-        .collect(Collectors.toList());
+    return criterion.apply(df.widgetList.stream()).map(Widget::name).collect(Collectors.toList());
   }
 }

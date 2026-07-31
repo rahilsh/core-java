@@ -7,9 +7,9 @@ import java.util.function.Predicate;
  * A worker thread for the multithreaded FizzBuzz problem (see {@link Question}).
  *
  * <p>Concept: all four threads share a single counter guarded by a common lock. Each thread owns a
- * {@link Predicate} deciding whether it is responsible for the current number and a {@link Function}
- * producing what to print. Only the responsible thread prints and advances the counter, so the
- * shared state stays consistent.
+ * {@link Predicate} deciding whether it is responsible for the current number and a {@link
+ * Function} producing what to print. Only the responsible thread prints and advances the counter,
+ * so the shared state stays consistent.
  */
 public class FBThread extends Thread {
   private static final Object lock = new Object();
