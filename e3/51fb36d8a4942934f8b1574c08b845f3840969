@@ -1,0 +1,26 @@
+src/test/java/com/rsh/jlab/concurrency/executor/ProcessListFasterTest.java
+  s_c9db79f1959e20::t_6f038748578fb4 1-64
+src/test/java/com/rsh/jlab/lambda/DynamicFilteringTest.java
+  s_c9db79f1959e20::t_aec1937cd5514c 1-74
+pom.xml
+  s_c9db79f1959e20::t_bc758e1516f7cd 17,20-38
+  s_c9db79f1959e20::t_f7b6d32f06345d 39
+src/main/java/com/rsh/jlab/concurrency/executor/ProcessListFaster.java
+  s_c9db79f1959e20::t_ecbe3df69cd97d 50-53,65-76,78,80-81,83
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.19",
+  "base_commit_sha": "e351fb36d8a4942934f8b1574c08b845f3840969",
+  "prompts": {},
+  "sessions": {
+    "s_c9db79f1959e20": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_045cafb4affexzQJJHrF5lY6S4",
+        "model": "claude-opus-4.8"
+      },
+      "human_author": "Rahil Shaikh <rahilrshk@gmail.com>"
+    }
+  }
+}
