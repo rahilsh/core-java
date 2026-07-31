@@ -1,0 +1,43 @@
+src/main/java/com/rsh/jlab/concurrency/basics/WaysToCreateThread.java
+  s_c9db79f1959e20::t_a16d17d172e13d 4-12
+src/main/java/com/rsh/jlab/concurrency/synchronizer/latch/CountDownLatchExample.java
+  s_c9db79f1959e20::t_f5bb26a09885ca 5-17
+src/main/java/com/rsh/jlab/concurrency/synchronizer/semaphore/Foo.java
+  s_c9db79f1959e20::t_c02b77cc910c3c 5-9
+src/main/java/com/rsh/jlab/concurrency/basics/ThreadJoin.java
+  s_c9db79f1959e20::t_fdf7df8aa322c6 3-14
+src/main/java/com/rsh/jlab/concurrency/basics/ThreadState.java
+  s_c9db79f1959e20::t_08984630a21b69 4-12
+src/main/java/com/rsh/jlab/concurrency/communication/WaitAndNotify.java
+  s_c9db79f1959e20::t_c5221a99d85c8f 4-12
+src/main/java/com/rsh/jlab/concurrency/synchronizer/semaphore/CallMethodInOrder.java
+  s_c9db79f1959e20::t_70dfef97dab4ce 2-13
+src/main/java/com/rsh/jlab/concurrency/fizzbuzz/FBThread.java
+  s_c9db79f1959e20::t_539b837f7bd522 6-13
+src/main/java/com/rsh/jlab/concurrency/basics/YieldExample.java
+  s_c9db79f1959e20::t_f053c5ed091b9b 3-15
+src/main/java/com/rsh/jlab/concurrency/deadlock/Deadlock.java
+  s_c9db79f1959e20::t_c4f3ac3682d007 3-16
+src/main/java/com/rsh/jlab/concurrency/executor/ExecutorExample.java
+  s_c9db79f1959e20::t_07e569753ad4d1 6-18
+src/main/java/com/rsh/jlab/concurrency/communication/PrintOddAndEvenNumbersInSequenceUsingTwoThreads.java
+  s_c9db79f1959e20::t_342bcd926ca521 3-13
+src/main/java/com/rsh/jlab/concurrency/fizzbuzz/Question.java
+  s_c9db79f1959e20::t_eccefd927e052e 3-13
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.19",
+  "base_commit_sha": "f2085e08d838ffb2e7ced2f7f51a48dcd2db1be1",
+  "prompts": {},
+  "sessions": {
+    "s_c9db79f1959e20": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_045cafb4affexzQJJHrF5lY6S4",
+        "model": "claude-opus-4.8"
+      },
+      "human_author": "Rahil Shaikh <rahilrshk@gmail.com>"
+    }
+  }
+}
