@@ -1,4 +1,4 @@
-package com.rsh.core_java.thread;
+package com.rsh.core_java.concurrency;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

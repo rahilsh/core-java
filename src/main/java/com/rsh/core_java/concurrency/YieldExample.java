@@ -1,4 +1,4 @@
-package com.rsh.core_java.thread;
+package com.rsh.core_java.concurrency;
 
 /** @author Rahil */
 public class YieldExample {

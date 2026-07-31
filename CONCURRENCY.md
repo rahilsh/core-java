@@ -104,3 +104,39 @@ https://www.youtube.com/watch?v=AAdhNxaAY7I
 - Barriers
 - Semaphores
 - Exchangers
+
+### Processing a large list faster (ProcessListFaster)
+`ProcessListFaster` shows how to speed up processing of a large collection by splitting the work
+across multiple threads instead of iterating over everything on a single thread.
+
+The idea is *data parallelism*: the same operation is applied independently to different parts of
+the data, so the parts can be processed at the same time.
+
+**Flow**
+1. **Build items** – create a large list (100,000 items) to process.
+2. **Partition** – split the list into contiguous chunks, one per thread, using `List.subList()`.
+   Each chunk is wrapped in a `Worker`. The last chunk absorbs any remainder so nothing is dropped
+   when the size does not divide evenly.
+3. **Run in parallel** – submit all workers to a fixed-size thread pool
+   (`Executors.newFixedThreadPool`) via `ExecutorService.invokeAll()`, which submits every task and
+   blocks until all of them complete.
+4. **Wait & propagate errors** – call `Future.get()` on each returned future. If a worker threw an
+   exception, `get()` re-throws it wrapped in an `ExecutionException`, so failures are not silently
+   lost.
+5. **Shut down** – the executor is always shut down in a `finally` block to release its threads.
+
+**Key APIs**
+- `Callable<V>` vs `Runnable` – `Worker` implements `Callable<Void>` so it can return a value and
+  throw checked exceptions (unlike `Runnable`).
+- `ExecutorService.invokeAll(tasks)` – submits a batch of tasks and waits for all to finish,
+  returning a `List<Future>` in the same order as the tasks.
+- `Future.get()` – blocks for the result and surfaces any exception thrown inside the task.
+
+**Notes / trade-offs**
+- `subList()` returns a *view* backed by the original list; the original list must not be
+  structurally modified while the workers run.
+- Benefit comes from CPU-bound work being spread across cores. In this demo the work is
+  `System.out.println`, which is I/O bound and serialized by the console lock, so the parallel
+  version is mainly illustrative of the pattern rather than a guaranteed speed-up.
+- Choose the thread count based on the workload: roughly the number of CPU cores for CPU-bound work,
+  and potentially higher for I/O-bound work.
