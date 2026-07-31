@@ -140,3 +140,30 @@ the data, so the parts can be processed at the same time.
   version is mainly illustrative of the pattern rather than a guaranteed speed-up.
 - Choose the thread count based on the workload: roughly the number of CPU cores for CPU-bound work,
   and potentially higher for I/O-bound work.
+
+### Virtual threads (VirtualThreadsExample)
+Virtual threads were stabilised in **Java 21** ([JEP 444](https://openjdk.org/jeps/444)) and change
+how you think about scaling concurrent work.
+
+- A **platform thread** is a thin wrapper over an OS thread. It is expensive (megabytes of stack,
+  OS scheduling), so historically we pooled a small number of them (see `ExecutorExample`,
+  `ProcessListFaster`).
+- A **virtual thread** is scheduled by the JVM onto a small pool of platform "carrier" threads.
+  It is so cheap you can create millions of them. When a virtual thread blocks (sleep, I/O, lock),
+  it is *unmounted* from its carrier, freeing that carrier to run other virtual threads.
+
+**Why it matters:** the simple, readable "one thread per task" model now scales to hundreds of
+thousands of concurrent tasks. You no longer need to pool threads or write callback-heavy async code
+just to handle many blocking operations.
+
+**Creating them**
+- `Thread.ofVirtual().start(runnable)` – start a single virtual thread.
+- `Executors.newVirtualThreadPerTaskExecutor()` – an executor that spawns a fresh virtual thread per
+  task; closing it (try-with-resources) waits for all tasks to finish.
+
+**When to use**
+- Great for **I/O-bound** workloads (many blocking calls) — that's where the scalability win comes
+  from.
+- Not a speed-up for **CPU-bound** work; you are still limited by the number of cores.
+- Avoid pooling virtual threads (they are cheap — just create one per task), and prefer them over
+  `synchronized` around blocking calls to avoid pinning a carrier thread.
