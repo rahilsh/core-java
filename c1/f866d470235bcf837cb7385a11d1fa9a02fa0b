@@ -1,0 +1,45 @@
+src/main/java/com/rsh/jlab/concurrency/deadlock/Deadlock.java
+  s_c9db79f1959e20::t_1aa3557fdc8ab5 1-33
+src/main/java/com/rsh/jlab/concurrency/basics/ThreadState.java
+  s_c9db79f1959e20::t_1aa3557fdc8ab5 1-56
+src/main/java/com/rsh/jlab/concurrency/synchronizer/semaphore/Foo.java
+  s_c9db79f1959e20::t_1aa3557fdc8ab5 1-57
+src/main/java/com/rsh/jlab/concurrency/fizzbuzz/Question.java
+  s_c9db79f1959e20::t_1aa3557fdc8ab5 1-25
+src/main/java/com/rsh/jlab/concurrency/synchronizer/latch/CountDownLatchExample.java
+  s_c9db79f1959e20::t_1aa3557fdc8ab5 1-44
+src/main/java/com/rsh/jlab/concurrency/communication/PrintOddAndEvenNumbersInSequenceUsingTwoThreads.java
+  s_c9db79f1959e20::t_1aa3557fdc8ab5 1-87
+src/main/java/com/rsh/jlab/concurrency/executor/ProcessListFaster.java
+  s_c9db79f1959e20::t_1aa3557fdc8ab5 1-117
+src/main/java/com/rsh/jlab/concurrency/synchronizer/semaphore/CallMethodInOrder.java
+  s_c9db79f1959e20::t_1aa3557fdc8ab5 1-26
+src/main/java/com/rsh/jlab/concurrency/fizzbuzz/FBThread.java
+  s_c9db79f1959e20::t_1aa3557fdc8ab5 1-33
+src/main/java/com/rsh/jlab/concurrency/executor/ExecutorExample.java
+  s_c9db79f1959e20::t_1aa3557fdc8ab5 1-32
+src/main/java/com/rsh/jlab/concurrency/communication/WaitAndNotify.java
+  s_c9db79f1959e20::t_1aa3557fdc8ab5 1-41
+src/main/java/com/rsh/jlab/concurrency/basics/WaysToCreateThread.java
+  s_c9db79f1959e20::t_1aa3557fdc8ab5 1-60
+src/main/java/com/rsh/jlab/concurrency/basics/YieldExample.java
+  s_c9db79f1959e20::t_1aa3557fdc8ab5 1-19
+src/main/java/com/rsh/jlab/concurrency/basics/ThreadJoin.java
+  s_c9db79f1959e20::t_1aa3557fdc8ab5 1-65
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.19",
+  "base_commit_sha": "c1f866d470235bcf837cb7385a11d1fa9a02fa0b",
+  "prompts": {},
+  "sessions": {
+    "s_c9db79f1959e20": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_045cafb4affexzQJJHrF5lY6S4",
+        "model": "claude-opus-4.8"
+      },
+      "human_author": "Rahil Shaikh <rahilrshk@gmail.com>"
+    }
+  }
+}
