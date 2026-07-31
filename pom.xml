@@ -58,7 +58,24 @@
           <artifactId>maven-project-info-reports-plugin</artifactId>
           <version>3.9.0</version>
         </plugin>
+        <!-- run any example's main() with: mvn exec:java -Dexec.mainClass=<fqcn> -->
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>exec-maven-plugin</artifactId>
+          <version>3.5.0</version>
+        </plugin>
       </plugins>
     </pluginManagement>
+
+    <plugins>
+      <!--
+        Lets learners run any example directly, e.g.
+          mvn compile exec:java -Dexec.mainClass=com.rsh.jlab.concurrency.basics.WaysToCreateThread
+      -->
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+      </plugin>
+    </plugins>
   </build>
 </project>

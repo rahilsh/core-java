@@ -1,6 +1,21 @@
 # java-toolkit
 core-java is one stop for core Java features and terminologies
 
+## Running an example
+Every example is a standalone class with a `main` method. Run any of them with the
+`exec-maven-plugin`:
+
+```
+mvn -q compile exec:java -Dexec.mainClass=<fully-qualified-class-name>
+```
+
+For example:
+
+```
+mvn -q compile exec:java -Dexec.mainClass=com.rsh.jlab.concurrency.virtualthreads.VirtualThreadsExample
+```
+
+
 ### Java Path
 ```
 /usr/libexec/java_home -V
