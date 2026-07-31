@@ -1,0 +1,23 @@
+pom.xml
+  s_c9db79f1959e20::t_b840c70bff577c 16
+.github/workflows/maven.yml
+  s_c9db79f1959e20::t_5387263adb146f 18-20,22-23
+.github/workflows/codeql.yml
+  s_c9db79f1959e20::t_1ca2e0532fb39b 43-49
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.19",
+  "base_commit_sha": "84102b853900f1d692fdc4ba053efcbfea5fbd6f",
+  "prompts": {},
+  "sessions": {
+    "s_c9db79f1959e20": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_045cafb4affexzQJJHrF5lY6S4",
+        "model": "claude-opus-4.8"
+      },
+      "human_author": "Rahil Shaikh <rahilrshk@gmail.com>"
+    }
+  }
+}
