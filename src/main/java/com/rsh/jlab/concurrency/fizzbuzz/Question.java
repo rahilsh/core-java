@@ -1,12 +1,16 @@
 package com.rsh.jlab.concurrency.fizzbuzz;
 
-/*
-FizzBuzz: In the classic problem FizzBuzz, you are told to print the numbers from 1 to n. However,
-when the number is divisible by 3, print "Fizz': When it is divisible by 5, print "Buzz': When it is divisible
-by 3 and 5, print 'FizzBuzz': In this problem, you are asked to do this in a multithreaded way.
-Implement a multithreaded version of FizzBuzz with four threads. One thread checks for divisibility
-of 3 and prints "Fizz': Another thread is responsible for divisibility of 5 and prints "Buzz': A third thread
-is responsible for divisibility of 3 and 5 and prints "FizzBuzz". A fourth thread does the numbers.
+/**
+ * Multithreaded FizzBuzz: print 1..N where multiples of 3 print "Fizz", multiples of 5 print
+ * "Buzz", multiples of both print "FizzBuzz", and everything else prints the number - using four
+ * cooperating threads.
+ *
+ * <p>Concept: the work is split by responsibility across four {@link FBThread} instances (Fizz,
+ * Buzz, FizzBuzz, and numbers). They share one counter and a lock so exactly one thread handles
+ * each value and the output stays in order.
+ *
+ * <p>Run it and observe: the sequence 1..100 is printed in order with the correct Fizz/Buzz
+ * substitutions, even though four threads are producing it.
  */
 public class Question {
 

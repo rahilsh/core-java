@@ -1,8 +1,16 @@
 package com.rsh.jlab.concurrency.basics;
 
 /**
+ * Demonstrates the different ways to create and start a thread in Java.
+ *
+ * <p>Concept: a {@link Thread} needs a piece of work to run. That work can be supplied by
+ * implementing {@link Runnable}, by subclassing {@code Thread}, via an anonymous class, or via a
+ * lambda. All four approaches are shown here.
+ *
+ * <p>Run it and observe: the thread names printed to the console are interleaved, showing the
+ * threads run concurrently rather than in the order they were started.
+ *
  * @author Rahil
- *     <p>This program demonstrates various ways to create a thread in Java
  */
 public class WaysToCreateThread {
   public static void main(String[] args) {

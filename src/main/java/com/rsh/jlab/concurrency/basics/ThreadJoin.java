@@ -1,6 +1,17 @@
 package com.rsh.jlab.concurrency.basics;
 
-/** @author Rahil */
+/**
+ * Demonstrates {@link Thread#join()}, which makes the calling thread wait until another thread
+ * finishes.
+ *
+ * <p>Concept: {@code join()} is how one thread waits for another to complete before continuing -
+ * useful for enforcing ordering or collecting results.
+ *
+ * <p>Run it and observe: in {@code variantOne} thread {@code t3} only starts after {@code t2} has
+ * fully finished, because {@code t2.join()} blocks the main thread in between.
+ *
+ * @author Rahil
+ */
 public class ThreadJoin {
   public static void main(String[] args) {
     variantOne();

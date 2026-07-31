@@ -1,5 +1,16 @@
 package com.rsh.jlab.concurrency.communication;
 
+/**
+ * Classic interview problem: print numbers 1..N in order using two threads, one for odd numbers and
+ * one for even numbers.
+ *
+ * <p>Concept: the two threads share a single counter and coordinate turns using {@code wait()} /
+ * {@code notify()} on a shared monitor - each thread prints its number, then hands control to the
+ * other. The {@code while} guard (not {@code if}) protects against spurious wakeups.
+ *
+ * <p>Run it and observe: the numbers 1..9 are printed strictly in order, alternating between the
+ * two threads.
+ */
 public class PrintOddAndEvenNumbersInSequenceUsingTwoThreads {
   // Java program for the above approach
 

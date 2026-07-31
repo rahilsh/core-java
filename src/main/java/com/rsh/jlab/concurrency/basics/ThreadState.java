@@ -1,6 +1,15 @@
 package com.rsh.jlab.concurrency.basics;
 
 /**
+ * Demonstrates the lifecycle states a thread moves through ({@link Thread.State}).
+ *
+ * <p>Concept: every thread is in exactly one state at a time - NEW before {@code start()},
+ * RUNNABLE once started, TIMED_WAITING while sleeping, and TERMINATED once {@code run()} returns.
+ *
+ * <p>Run it and observe: a thread reports {@code NEW} and {@code not alive} before {@code start()},
+ * and a different state afterwards. Reference:
+ * https://www.baeldung.com/java-thread-lifecycle
+ *
  * @author Rahil
  */
 public class ThreadState {

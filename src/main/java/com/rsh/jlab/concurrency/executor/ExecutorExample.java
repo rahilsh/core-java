@@ -3,7 +3,19 @@ package com.rsh.jlab.concurrency.executor;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-/** @author Rahil */
+/**
+ * Demonstrates the {@link java.util.concurrent.ExecutorService} - the high-level way to run tasks
+ * without managing threads by hand.
+ *
+ * <p>Concept: a fixed thread pool reuses a small number of threads to run many tasks. Here 10 tasks
+ * are submitted to a pool of 5 threads, so only 5 run at a time and the rest queue up.
+ *
+ * <p>Run it and observe: 5 tasks start together, and the remaining 5 only start once threads free
+ * up. Reference:
+ * https://winterbe.com/posts/2015/04/07/java8-concurrency-tutorial-thread-executor-examples/
+ *
+ * @author Rahil
+ */
 public class ExecutorExample {
 
   public static void main(String[] args) {

@@ -2,6 +2,11 @@ package com.rsh.jlab.concurrency.synchronizer.semaphore;
 
 import java.util.concurrent.Semaphore;
 
+/**
+ * Support class for {@link CallMethodInOrder}: enforces that {@code first()}, {@code second()}, and
+ * {@code third()} run in that order using two {@link Semaphore} gates that are pre-acquired in the
+ * constructor and released as each step completes.
+ */
 public class Foo {
   private static final int PAUSE_TIME = 1000;
   private Semaphore sem1;

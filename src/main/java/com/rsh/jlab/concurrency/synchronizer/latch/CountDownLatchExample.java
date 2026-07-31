@@ -2,7 +2,19 @@ package com.rsh.jlab.concurrency.synchronizer.latch;
 
 import java.util.concurrent.CountDownLatch;
 
-/** @author Rahil */
+/**
+ * Demonstrates {@link java.util.concurrent.CountDownLatch}, a one-shot synchronizer that lets one
+ * or more threads wait until a set of operations completes.
+ *
+ * <p>Concept: a latch is initialised with a count. Threads block on {@code await()} until the count
+ * reaches zero via {@code countDown()}. This example uses two latches - a "start" latch so all
+ * worker threads begin together, and an "end" latch so the main thread waits for them to finish.
+ *
+ * <p>Run it and observe: workers print "thread entered" then pause on the start latch until the
+ * main thread counts it down, after which they all proceed together.
+ *
+ * @author Rahil
+ */
 public class CountDownLatchExample {
 
   public static void main(String[] args) {

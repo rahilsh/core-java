@@ -1,8 +1,16 @@
 package com.rsh.jlab.concurrency.communication;
 
 /**
+ * Demonstrates the low-level {@code wait()} / {@code notify()} inter-thread communication API.
+ *
+ * <p>Concept: a thread calls {@code wait()} on an object's monitor to release the lock and pause
+ * until another thread calls {@code notify()} on the same monitor. Both must be called while
+ * holding the lock (inside a {@code synchronized} block).
+ *
+ * <p>Run it and observe: the main thread prints "Waiting..." and blocks on {@code adder.wait()}
+ * until the worker thread finishes its computation and calls {@code notify()}.
+ *
  * @author Rahil
- *     <p>Used to demonstrate the wait and notify API
  */
 public class WaitAndNotify {
 

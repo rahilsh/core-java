@@ -1,15 +1,16 @@
 package com.rsh.jlab.concurrency.synchronizer.semaphore;
-/*
-Call In Order: Suppose we have the following code:
-public class Foo {
-	public FOO() { ••• }
-	public void first() { ••• }
-	public void second() { ••• }
-	public void third() { .• • }
-}
-The same instance of Foo will be passed to three different threads. ThreadA will call first,
-threadB will call second, and threadC will call third. Design a mechanism to ensure that
-first is called before second and second is called before third.
+
+/**
+ * Classic interview problem: given a {@link Foo} whose {@code first()}, {@code second()}, and
+ * {@code third()} methods are each called by a different thread, guarantee they execute in order
+ * regardless of the order the threads are started.
+ *
+ * <p>Concept: {@link java.util.concurrent.Semaphore}s act as gates. {@code Foo} starts with two
+ * permits already acquired; {@code first()} releases the first gate, which {@code second()} waits
+ * on, and {@code second()} releases the second gate, which {@code third()} waits on.
+ *
+ * <p>Run it and observe: even though the threads are started in reverse order (third, second,
+ * first), the output is always "Executing 1", then 2, then 3.
  */
 public class CallMethodInOrder {
   public static void main(String[] args) {
