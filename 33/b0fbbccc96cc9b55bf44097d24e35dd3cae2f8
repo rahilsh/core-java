@@ -1,0 +1,21 @@
+CONCURRENCY.md
+  s_c9db79f1959e20::t_71efab8bc092c1 143-169
+src/main/java/com/rsh/jlab/concurrency/virtualthreads/VirtualThreadsExample.java
+  s_c9db79f1959e20::t_e242f0ad689822 1-62
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.19",
+  "base_commit_sha": "33b0fbbccc96cc9b55bf44097d24e35dd3cae2f8",
+  "prompts": {},
+  "sessions": {
+    "s_c9db79f1959e20": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_045cafb4affexzQJJHrF5lY6S4",
+        "model": "claude-opus-4.8"
+      },
+      "human_author": "Rahil Shaikh <rahilrshk@gmail.com>"
+    }
+  }
+}
