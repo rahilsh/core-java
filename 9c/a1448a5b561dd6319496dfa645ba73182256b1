@@ -1,0 +1,29 @@
+.github/ISSUE_TEMPLATE/bug_report.md
+  s_c9db79f1959e20::t_cdad7f38bc47b3 2-28
+  s_c9db79f1959e20::t_20c077b1d9cf4a 1
+CONTRIBUTING.md
+  s_c9db79f1959e20::t_8f1c4e1b5468cb 1-61
+.github/ISSUE_TEMPLATE/new_example.md
+  s_c9db79f1959e20::t_8d6b02456dae1f 2-22
+  s_c9db79f1959e20::t_1bc645a38ca7e6 1
+CODE_OF_CONDUCT.md
+  s_c9db79f1959e20::t_72bce24bf7958c 1-56
+.github/PULL_REQUEST_TEMPLATE.md
+  s_c9db79f1959e20::t_2695c50622ac4f 1-19
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.19",
+  "base_commit_sha": "9ca1448a5b561dd6319496dfa645ba73182256b1",
+  "prompts": {},
+  "sessions": {
+    "s_c9db79f1959e20": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_045cafb4affexzQJJHrF5lY6S4",
+        "model": "claude-opus-4.8"
+      },
+      "human_author": "Rahil Shaikh <rahilrshk@gmail.com>"
+    }
+  }
+}
