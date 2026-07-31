@@ -1,0 +1,21 @@
+.sdkmanrc
+  s_c9db79f1959e20::t_37769f0cc6d88e 1-5
+pom.xml
+  s_c9db79f1959e20::t_61902660d71015 88-91,96-115
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.19",
+  "base_commit_sha": "1d1fa7c222889872412abb1eaca2e9d3e70236f1",
+  "prompts": {},
+  "sessions": {
+    "s_c9db79f1959e20": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_045cafb4affexzQJJHrF5lY6S4",
+        "model": "claude-opus-4.8"
+      },
+      "human_author": "Rahil Shaikh <rahilrshk@gmail.com>"
+    }
+  }
+}
