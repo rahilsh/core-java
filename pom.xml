@@ -85,10 +85,34 @@
           <artifactId>exec-maven-plugin</artifactId>
           <version>3.5.0</version>
         </plugin>
+        <plugin>
+          <artifactId>maven-enforcer-plugin</artifactId>
+          <version>3.6.3</version>
+        </plugin>
       </plugins>
     </pluginManagement>
 
     <plugins>
+      <!-- Fail fast if the project is built with a JDK older than 21. -->
+      <plugin>
+        <artifactId>maven-enforcer-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>enforce-java-21</id>
+            <goals>
+              <goal>enforce</goal>
+            </goals>
+            <configuration>
+              <rules>
+                <requireJavaVersion>
+                  <version>[21,)</version>
+                  <message>This project requires JDK 21 or newer (matching CI).</message>
+                </requireJavaVersion>
+              </rules>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
       <!--
         Lets learners run any example directly, e.g.
           mvn compile exec:java -Dexec.mainClass=com.rsh.jlab.concurrency.basics.WaysToCreateThread
