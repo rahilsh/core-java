@@ -1,4 +1,4 @@
-package com.rsh.core_java.concurrency;
+package com.rsh.jlab.concurrency;
 
 public class PrintOddAndEvenNumbersInSequenceUsingTwoThreads {
   // Java program for the above approach

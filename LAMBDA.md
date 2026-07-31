@@ -1,6 +1,6 @@
 # Lambdas & Functional Composition in Java
 
-Notes and examples for the `com.rsh.core_java.lambda` package. The focus is on **composing**
+Notes and examples for the `com.rsh.jlab.lambda` package. The focus is on **composing**
 behaviour at runtime by storing functional interfaces in data structures and combining them, rather
 than hard-coding a fixed pipeline.
 
@@ -94,7 +94,7 @@ do this.
 ### Run it
 
 ```
-mvn -q compile exec:java -Dexec.mainClass=com.rsh.core_java.lambda.DynamicFiltering
+mvn -q compile exec:java -Dexec.mainClass=com.rsh.jlab.lambda.DynamicFiltering
 ```
 
 Reference: http://stackoverflow.com/questions/22845574/how-to-dynamically-do-filtering-in-java-8

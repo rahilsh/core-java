@@ -1,4 +1,4 @@
-package com.rsh.core_java.lambda;
+package com.rsh.jlab.lambda;
 
 import static java.util.Comparator.comparing;
 import static java.util.stream.Collectors.toList;

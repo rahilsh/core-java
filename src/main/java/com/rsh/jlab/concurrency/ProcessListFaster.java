@@ -1,4 +1,4 @@
-package com.rsh.core_java.concurrency;
+package com.rsh.jlab.concurrency;
 
 import java.util.ArrayList;
 import java.util.List;
