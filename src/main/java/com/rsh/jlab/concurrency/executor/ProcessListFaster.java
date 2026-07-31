@@ -47,7 +47,10 @@ public class ProcessListFaster {
   /** Steps 2-4: partition the work, run it on a thread pool, and wait for completion. */
   private static void processInParallel(List<Item> items, int threadCount)
       throws InterruptedException {
-    List<Worker> workers = partition(items, threadCount);
+    List<Worker> workers = new ArrayList<>(threadCount);
+    for (List<Item> chunk : splitIntoChunks(items, threadCount)) {
+      workers.add(new Worker(chunk));
+    }
 
     ExecutorService executor = Executors.newFixedThreadPool(threadCount);
     try {
@@ -59,18 +62,25 @@ public class ProcessListFaster {
     }
   }
 
-  /** Step 2: split the list into {@code threadCount} contiguous chunks, one per worker. */
-  private static List<Worker> partition(List<Item> items, int threadCount) {
-    List<Worker> workers = new ArrayList<>(threadCount);
-    int chunkSize = items.size() / threadCount;
-
-    for (int index = 0; index < threadCount; index++) {
-      int startAt = index * chunkSize;
-      // The last chunk absorbs any remainder so no items are dropped.
-      int endAt = (index == threadCount - 1) ? items.size() : startAt + chunkSize;
-      workers.add(new Worker(items.subList(startAt, endAt)));
+  /**
+   * Step 2: split a list into {@code chunks} contiguous sub-lists. The last chunk absorbs any
+   * remainder so that no elements are dropped when the size does not divide evenly.
+   *
+   * <p>Package-private and generic so it can be unit tested independently of the threading code.
+   */
+  static <T> List<List<T>> splitIntoChunks(List<T> items, int chunks) {
+    if (chunks <= 0) {
+      throw new IllegalArgumentException("chunks must be positive, was " + chunks);
     }
-    return workers;
+    List<List<T>> result = new ArrayList<>(chunks);
+    int chunkSize = items.size() / chunks;
+
+    for (int index = 0; index < chunks; index++) {
+      int startAt = index * chunkSize;
+      int endAt = (index == chunks - 1) ? items.size() : startAt + chunkSize;
+      result.add(items.subList(startAt, endAt));
+    }
+    return result;
   }
 
   /** Step 4: surface any exception thrown inside a worker by calling get() on each future. */
