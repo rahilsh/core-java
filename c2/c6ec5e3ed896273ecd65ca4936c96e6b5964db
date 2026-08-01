@@ -1,0 +1,19 @@
+.github/CODEOWNERS
+  s_c9db79f1959e20::t_75c36f28a599a1 1-6
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.19",
+  "base_commit_sha": "c2c6ec5e3ed896273ecd65ca4936c96e6b5964db",
+  "prompts": {},
+  "sessions": {
+    "s_c9db79f1959e20": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_045cafb4affexzQJJHrF5lY6S4",
+        "model": "claude-opus-4.8"
+      },
+      "human_author": "Rahil Shaikh <rahilrshk@gmail.com>"
+    }
+  }
+}
