@@ -1,0 +1,51 @@
+.github/ISSUE_TEMPLATE/bug_report.md
+  s_03b443c04f7034::t_cabeee6960ebdf 1-28
+.github/ISSUE_TEMPLATE/new_example.md
+  s_03b443c04f7034::t_33e1cd9ee65341 1-22
+src/main/java/com/rsh/jlab/concurrency/basics/ThreadJoin.java
+  s_03b443c04f7034::t_4a84806a64a3ba 1-76
+src/main/java/com/rsh/jlab/concurrency/basics/ThreadState.java
+  s_c9db79f1959e20::t_1828855ff601be 1-64
+src/main/java/com/rsh/jlab/concurrency/basics/YieldExample.java
+  s_c9db79f1959e20::t_fb89e956c1b373 1-30
+src/main/java/com/rsh/jlab/concurrency/communication/PrintOddAndEvenNumbersInSequenceUsingTwoThreads.java
+  s_c9db79f1959e20::t_227e724a8f2264 1-98
+src/main/java/com/rsh/jlab/concurrency/executor/ExecutorExample.java
+  s_c9db79f1959e20::t_2367dc44a16d9e 1-46
+src/main/java/com/rsh/jlab/concurrency/executor/ProcessListFaster.java
+  s_c9db79f1959e20::t_0359db5b7b4998 1-128
+src/main/java/com/rsh/jlab/concurrency/fizzbuzz/FBThread.java
+  s_c9db79f1959e20::t_84323faad9771b 1-41
+src/main/java/com/rsh/jlab/concurrency/synchronizer/semaphore/CallMethodInOrder.java
+  s_c9db79f1959e20::t_f37e1f8c7f7a9b 1-27
+src/main/java/com/rsh/jlab/concurrency/synchronizer/semaphore/Foo.java
+  s_c9db79f1959e20::t_dace00a585724f 1-62
+src/main/java/com/rsh/jlab/lambda/DynamicFiltering.java
+  s_c9db79f1959e20::t_cb8de4495fe4d7 1-172
+src/test/java/com/rsh/jlab/lambda/DynamicFilteringTest.java
+  s_c9db79f1959e20::t_ec80a03bbf5f6e 1-71
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.19",
+  "base_commit_sha": "64d48831f8ee0a931ce5761aba65bcb37d81597e",
+  "prompts": {},
+  "sessions": {
+    "s_03b443c04f7034": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_05564332bffe0ZsndSY1z8jJIX",
+        "model": "gpt-5.3-codex"
+      },
+      "human_author": "Rahil Shaikh <rahilrshk@gmail.com>"
+    },
+    "s_c9db79f1959e20": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_045cafb4affexzQJJHrF5lY6S4",
+        "model": "claude-opus-4.8"
+      },
+      "human_author": "Rahil Shaikh <rahilrshk@gmail.com>"
+    }
+  }
+}
