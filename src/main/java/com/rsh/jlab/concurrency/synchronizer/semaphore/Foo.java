@@ -1,0 +1,62 @@
+package com.rsh.jlab.concurrency.synchronizer.semaphore;
+
+import java.util.concurrent.Semaphore;
+
+/**
+ * Support class for {@link CallMethodInOrder}: enforces that {@code first()}, {@code second()}, and
+ * {@code third()} run in that order using two {@link Semaphore} gates that are pre-acquired in the
+ * constructor and released as each step completes.
+ */
+public class Foo {
+  private static final int PAUSE_TIME = 1000;
+  private Semaphore sem1;
+  private Semaphore sem2;
+
+  public Foo() {
+    try {
+      sem1 = new Semaphore(1);
+      sem2 = new Semaphore(1);
+
+      sem1.acquire();
+      sem2.acquire();
+    } catch (InterruptedException e) {
+      e.printStackTrace();
+    }
+  }
+
+  public void first() {
+    try {
+      System.out.println("Started Executing 1");
+      Thread.sleep(PAUSE_TIME);
+      System.out.println("Finished Executing 1");
+      sem1.release();
+    } catch (Exception ex) {
+      ex.printStackTrace();
+    }
+  }
+
+  public void second() {
+    try {
+      sem1.acquire();
+      sem1.release();
+      System.out.println("Started Executing 2");
+      Thread.sleep(PAUSE_TIME);
+      System.out.println("Finished Executing 2");
+      sem2.release();
+    } catch (Exception ex) {
+      ex.printStackTrace();
+    }
+  }
+
+  public void third() {
+    try {
+      sem2.acquire();
+      sem2.release();
+      System.out.println("Started Executing 3");
+      Thread.sleep(PAUSE_TIME);
+      System.out.println("Finished Executing 3");
+    } catch (Exception ex) {
+      ex.printStackTrace();
+    }
+  }
+}

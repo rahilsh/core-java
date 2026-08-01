@@ -1,0 +1,5 @@
+# Pins the local JDK to Java 21 to match CI.
+# With SDKMAN auto-env enabled (`sdk config` -> sdkman_auto_env=true),
+# running `cd` into this directory switches your JDK automatically.
+# Otherwise run `sdk env` here once.
+java=21.0.9-tem
